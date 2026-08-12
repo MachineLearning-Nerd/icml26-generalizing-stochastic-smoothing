@@ -27,4 +27,4 @@ Claim status:
 - Claim 5: VERIFIED paper-target ranking in 12/12 cases
 - Claim 6: BLOCKED; four application routes are audited, but not all four full demonstrations were executed at the disclosed scale
 
-The current main branch contains the latest publication surface. Fifteen historical experiment branch pointers are documented in branch-audit.md and will be retired after the audit is committed.
+The current main branch contains the latest publication surface. Fourteen historical experiment branch pointers are documented in branch-audit.md and were retired after the audit was committed.
