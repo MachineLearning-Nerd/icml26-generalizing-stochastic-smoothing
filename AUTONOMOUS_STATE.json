@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "paper": "arXiv:2410.08125",
+  "openreview_id": "GBWqZNoeIk",
+  "phase": "documentation_and_branch_normalization",
+  "next_action": "commit_documentation_then_normalize_history_and_remote_branches",
+  "active_run_ids": [],
+  "completed_milestones": [
+    "source_record_and_hashes_present",
+    "claims_1_to_5_cumulative_evidence_present",
+    "claim_6_four_route_audit_present",
+    "claim_ledger_written",
+    "branch_audit_written"
+  ],
+  "failed_attempts": [],
+  "claim_attempt_counts": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 4
+  },
+  "last_checkpoint": "2026-08-13T00:00:00Z",
+  "last_known_git_commit": "75f7afea19f6a90a8ecb17280f773f64d4be5f34",
+  "publication_allowed": true,
+  "compute_policy": "historical HF cpu-upgrade evidence only; no GPU, paid, or remote rerun without explicit authorization",
+  "former_repository": "icml26-repro-okzQ1x71pS-generalizing-stochastic-smoothing-for-differentiation-and-gradient-estimatio",
+  "target_repository": "icml26-generalizing-stochastic-smoothing",
+  "canonical_branch": "main",
+  "historical_remote_branch_count": 14,
+  "claim_statuses": {
+    "1": "VERIFIED",
+    "2": "VERIFIED",
+    "3": "VERIFIED",
+    "4": "VERIFIED",
+    "5": "VERIFIED",
+    "6": "BLOCKED"
+  }
+}
