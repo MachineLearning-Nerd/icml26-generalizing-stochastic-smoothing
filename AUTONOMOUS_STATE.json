@@ -24,7 +24,7 @@
     "6": 4
   },
   "last_checkpoint": "2026-08-13T00:00:00Z",
-  "last_known_git_commit": "1a5375a",
+  "last_known_git_commit": "8fd0a4f",
   "publication_allowed": true,
   "compute_policy": "historical HF cpu-upgrade evidence only; no GPU, paid, or remote rerun without explicit authorization",
   "former_repository": "icml26-repro-okzQ1x71pS-generalizing-stochastic-smoothing-for-differentiation-and-gradient-estimatio",
