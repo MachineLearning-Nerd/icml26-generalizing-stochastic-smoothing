@@ -10,8 +10,8 @@ Former GitHub repository: https://github.com/MachineLearning-Nerd/icml26-repro-o
 Target GitHub repository: https://github.com/MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing
 Canonical branch: main
 
-Current phase: documentation_and_branch_normalization
-Publication status: README, claim ledger, branch audit, and status metadata prepared; history and remote branch cleanup pending
+Current phase: published_and_verified
+Publication status: normalized repository published and remote branch cleanup verified; no new scientific run was started
 Compute policy: historical evidence used HF cpu-upgrade with an 8-vCPU cgroup quota and no GPU; no new expensive run is authorized by this cleanup
 
 Source pins:
