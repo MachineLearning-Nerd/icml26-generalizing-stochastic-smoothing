@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing",
+  "previous_repository": "MachineLearning-Nerd/icml26-repro-okzQ1x71pS-generalizing-stochastic-smoothing-for-differentiation-and-gradient-estimatio",
+  "overall_status": "VERIFIED_CLAIMS_1_TO_5_BLOCKED_CLAIM_6",
+  "paper": {
+    "title": "Generalizing Stochastic Smoothing for Differentiation and Gradient Estimation",
+    "arxiv": "2410.08125",
+    "openreview": "GBWqZNoeIk",
+    "authors": [
+      "Felix Petersen",
+      "Christian Borgelt",
+      "Aashwin Ananda Mishra",
+      "Stefano Ermon"
+    ]
+  },
+  "recorded_runs": [
+    {
+      "run_id": "cbb3de08-48e9-48a0-87c9-5ffb65d6e9cb",
+      "command": "uv sync --frozen --no-dev && .venv/bin/python -m repro.run",
+      "source_branch": "orx/tem-primary-source-falsification-and-cumulative",
+      "source_sha": "75d1f2c6c76c2c642ba59319a097a79a4f5e504d",
+      "backend": "hf/cpu-upgrade",
+      "python": "3.12.12",
+      "runtime_seconds": 2287.0881601369474,
+      "estimated_cost_usd": 0.019059068001141228
+    },
+    {
+      "run_id": "174c64f5-4aba-4818-a515-0ee0c9479741",
+      "command": "uv sync --frozen --no-dev && .venv/bin/python -m repro.run",
+      "source_branch": "orx/repair-publication-gate-and-red-team-candidate",
+      "source_sha": "f2a974d677660fa7168072c3c710ccf15bdc9efa",
+      "backend": "hf/cpu-upgrade",
+      "python": "3.12.12",
+      "runtime_seconds": 2611.389107635943,
+      "estimated_cost_usd": 0.021761575896966194
+    }
+  ],
+  "claim_statuses": {
+    "C1": "VERIFIED",
+    "C2": "VERIFIED",
+    "C3": "VERIFIED",
+    "C4": "VERIFIED",
+    "C5": "VERIFIED",
+    "C6": "BLOCKED"
+  },
+  "content_addressed_artifacts": [
+    {"path": "evidence/run_cbb3de08/cumulative_result.json", "sha256": "c731d9bb0f0fc3a24d87cdbad8f10b8e130d4c3ee62106a93438516c0856eac9"},
+    {"path": "evidence/run_cbb3de08/section4_raw.csv", "sha256": "07ff1d244eea4412ee1dda84ec20370bbf6808fe314836dba6b5b8527a66c619"},
+    {"path": "evidence/run_cbb3de08/section4_checker.json", "sha256": "1b1215bc96d177c7e36e552f9e432dbf10b3ef8c545a1cf6197fcfd40aede933"},
+    {"path": "evidence/run_cbb3de08/mnist_result.json", "sha256": "71fc0c56f5cb2f6c053fbe2b0172b86738663bae2ee6540aae1638a177f1b119"},
+    {"path": "evidence/run_cbb3de08/warcraft_result.json", "sha256": "1ccfacabba41fb252761494db398a1642249b8b7a90ef31a317be85bab93af61"},
+    {"path": "evidence/run_cbb3de08/rendering_result.json", "sha256": "23d2055328fde5ab30e62ae652a2a4282aa9fd077b73a11fa2c47afd442b5f10"},
+    {"path": "evidence/run_cbb3de08/tem_result.json", "sha256": "609ad038391913f9fef8675bdcd7f9a796a29b6e8df6c19c2934045c7517f09c"},
+    {"path": "evidence/run_174c64f5/cumulative_result.json", "sha256": "9fb7c58e5f87c6488c020ef5a88e60059623859d92552a49b374a63b4c03ac40"},
+    {"path": "evidence/run_174c64f5/release_checker.json", "sha256": "1bb09415c8681433956c3a3ed92778f82e96b1e7f93a87b6c539bcb9a085b2c2"},
+    {"path": "evidence/run_174c64f5/run_metadata.json", "sha256": "869719b05a092838701380a02c62ce21721711b54ea428768139a553ed43f202"},
+    {"path": "logbook.json", "sha256": "1e8138e803a34717c654dc090fede67132107b6b7ab94faf5bb94abe9bac9c11"},
+    {"path": "notebooks/reproduction.py", "sha256": "2c1f5fde326a7e2c50746bea4f0cc7c3a66f843bb70b7973066fc4b2acae36de"},
+    {"path": "pyproject.toml", "sha256": "db69c7243b94fd2b9c5c9857caa30888f100a9243e2ab4238945c40dd81aae5b"},
+    {"path": "uv.lock", "sha256": "481c3d6f9eb6bd123130322fb126fbf579d48f118a140bb597d14a3bbf3b3afa"}
+  ],
+  "required_audit_files": [
+    "README.md",
+    "STATUS.md",
+    "REPORT.md",
+    "CLAIM_EVIDENCE.md",
+    "SOURCE_AUDIT.md",
+    "BRANCH_AUDIT.md",
+    "ENVIRONMENT.md",
+    "AUTHOR_THANK_YOU.md",
+    "CITATION.cff",
+    "claims.json",
+    "EVIDENCE_MANIFEST.json",
+    "verify_final.py"
+  ],
+  "required_evidence_paths": [
+    "branch-audit.md",
+    "logbook.json",
+    "pages/current/page.md",
+    "pages/current/claims-1-3.md",
+    "pages/current/claims-4-5.md",
+    "pages/current/claim-6.md",
+    "evidence/run_cbb3de08/cumulative_result.json",
+    "evidence/run_cbb3de08/section4_raw.csv",
+    "evidence/run_cbb3de08/section4_checker.json",
+    "evidence/run_cbb3de08/mnist_result.json",
+    "evidence/run_cbb3de08/warcraft_result.json",
+    "evidence/run_cbb3de08/rendering_result.json",
+    "evidence/run_cbb3de08/tem_result.json",
+    "evidence/run_174c64f5/cumulative_result.json",
+    "evidence/run_174c64f5/release_checker.json",
+    "release/upload_allowlist.txt",
+    "release/upload_manifest.sha256",
+    "repro/check_release.py",
+    "pyproject.toml",
+    "uv.lock"
+  ],
+  "branches": {
+    "expected_final": ["main"],
+    "historical_remote_branch_count": 14,
+    "legacy_prefixes_removed": ["orx/"],
+    "legacy_refs_are_provenance_only": true
+  },
+  "external_evaluation_boundary": {
+    "current_score_claim": null,
+    "interpretation": "Recorded release checks passed; no current judge score is claimed."
+  },
+  "attribution": {
+    "name": "MachineLearning-Nerd",
+    "email": "MachineLearning-Nerd@users.noreply.github.com",
+    "author_and_committer_required": true,
+    "co_author_trailers_allowed": false
+  }
+}

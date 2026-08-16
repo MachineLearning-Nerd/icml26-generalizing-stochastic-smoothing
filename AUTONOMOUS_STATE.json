@@ -10,6 +10,7 @@
     "claims_1_to_5_cumulative_evidence_present",
     "claim_6_four_route_audit_present",
     "claim_ledger_written",
+    "audit_dossier_written",
     "branch_audit_written",
     "repository_renamed_and_history_normalized",
     "remote_branch_cleanup_verified"
@@ -23,8 +24,8 @@
     "5": 1,
     "6": 4
   },
-  "last_checkpoint": "2026-08-13T00:00:00Z",
-  "last_known_git_commit": "8fd0a4f",
+  "last_checkpoint": "2026-08-17T00:00:00Z",
+  "last_known_git_commit": "ee85e28",
   "publication_allowed": true,
   "compute_policy": "historical HF cpu-upgrade evidence only; no GPU, paid, or remote rerun without explicit authorization",
   "former_repository": "icml26-repro-okzQ1x71pS-generalizing-stochastic-smoothing-for-differentiation-and-gradient-estimatio",

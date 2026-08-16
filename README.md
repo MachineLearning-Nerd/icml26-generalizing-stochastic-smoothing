@@ -39,6 +39,25 @@ The current result is intentionally asymmetric:
 | Fixed entrypoint | uv sync --frozen --no-dev && .venv/bin/python -m repro.run |
 | Compute policy | Historical run used HF cpu-upgrade; no GPU was requested. Future runs require explicitly authorized compute. |
 
+## Audit dossier
+
+The repository has been normalized and published as
+[MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing](https://github.com/MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing).
+The detailed audit records are separated by purpose:
+
+| File | Purpose |
+| --- | --- |
+| [CLAIM_EVIDENCE.md](CLAIM_EVIDENCE.md) | Claim-by-claim production paths, evidence, status, and limitations. |
+| [SOURCE_AUDIT.md](SOURCE_AUDIT.md) | Paper identity, source pins, cited repositories, and provenance boundaries. |
+| [BRANCH_AUDIT.md](BRANCH_AUDIT.md) | Final branch policy and pointer to the detailed historical branch table. |
+| [ENVIRONMENT.md](ENVIRONMENT.md) | Recorded runs, compute provenance, dependencies, and artifact hashes. |
+| [REPORT.md](REPORT.md) | Scoped audit decision and publication boundary. |
+| [claims.json](claims.json) | Machine-readable claim ledger. |
+| [EVIDENCE_MANIFEST.json](EVIDENCE_MANIFEST.json) | Machine-readable evidence hashes and required paths. |
+| [verify_final.py](verify_final.py) | Dependency-free publication verifier. |
+| [CITATION.cff](CITATION.cff) | Citation metadata for the paper and this audit. |
+| [AUTHOR_THANK_YOU.md](AUTHOR_THANK_YOU.md) | Author thank-you note and independence statement. |
+
 The paper does not provide an author-maintained implementation link in the public source record. The reproduction therefore distinguishes independent reconstruction code from the external repositories cited by the paper:
 
 - [martius-lab/blackbox-differentiation-combinatorial-solvers](https://github.com/martius-lab/blackbox-differentiation-combinatorial-solvers), pinned for the Warcraft data/model audit at commit 027e82ee818530f2823851d6530e0d2c8657bbcb.
@@ -131,7 +150,9 @@ For focused inspection, read the current verification pages:
 
 The normalized repository has one canonical branch: main. Historical experiment branch purposes are preserved in [branch-audit.md](branch-audit.md); the old orx/ remote pointers were not part of the final publication surface.
 
-Every reachable commit after normalization is attributed to MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com>. The scientific run metadata retains its original commit SHA and experiment branch as provenance for the evidence, while the public repository history is normalized for maintainability.
+Every reachable commit after normalization is attributed to MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>. The scientific run metadata retains its original commit SHA and experiment branch as provenance for the evidence, while the public repository history is normalized for maintainability.
+
+The complete branch table is preserved in [branch-audit.md](branch-audit.md) and summarized in [BRANCH_AUDIT.md](BRANCH_AUDIT.md).
 
 ## Limitations
 

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this audit or its recorded outputs, please cite the paper and this repository."
+title: "ICML 2026 Generalizing Stochastic Smoothing Audit"
+version: "1.0.0"
+date-released: 2026-08-17
+authors:
+  - name: MachineLearning-Nerd
+repository-code: "https://github.com/MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing"
+url: "https://github.com/MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing"
+references:
+  - type: article
+    title: "Generalizing Stochastic Smoothing for Differentiation and Gradient Estimation"
+    authors:
+      - given-names: Felix
+        family-names: Petersen
+      - given-names: Christian
+        family-names: Borgelt
+      - given-names: Aashwin Ananda
+        family-names: Mishra
+      - given-names: Stefano
+        family-names: Ermon
+    year: 2024
+    url: "https://arxiv.org/abs/2410.08125"
+    identifiers:
+      - type: arxiv
+        value: "2410.08125"

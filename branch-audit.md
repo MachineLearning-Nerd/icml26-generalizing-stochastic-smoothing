@@ -22,4 +22,4 @@ The repository had one publication branch and fourteen remote experiment branche
 
 The branch names were generated experiment labels, not stable public API. The normalized publication surface uses only main. Branch-specific claims and outcomes remain inspectable through this audit and the committed evidence paths.
 
-Before normalization, the branch tips were authored with the local Dinesh identity. The final history rewrite will set both author and committer to MachineLearning-Nerd <37579156+MachineLearning-Nerd@users.noreply.github.com> for every reachable commit.
+Before normalization, the branch tips were authored with the local Dinesh identity. The final history rewrite sets both author and committer to MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com> for every reachable commit.

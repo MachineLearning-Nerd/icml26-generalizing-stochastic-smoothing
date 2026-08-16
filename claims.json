@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing",
+  "previous_repository": "MachineLearning-Nerd/icml26-repro-okzQ1x71pS-generalizing-stochastic-smoothing-for-differentiation-and-gradient-estimatio",
+  "overall_status": "VERIFIED_CLAIMS_1_TO_5_BLOCKED_CLAIM_6",
+  "paper": {
+    "title": "Generalizing Stochastic Smoothing for Differentiation and Gradient Estimation",
+    "arxiv": "2410.08125",
+    "openreview": "GBWqZNoeIk",
+    "authors": [
+      "Felix Petersen",
+      "Christian Borgelt",
+      "Aashwin Ananda Mishra",
+      "Stefano Ermon"
+    ],
+    "venue_record": "ICLR 2025 submission 3968",
+    "collection_label": "ICML 2026"
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "paper_anchor": "Lemma 3",
+      "status": "VERIFIED",
+      "producer": "repro/numerics.py",
+      "evidence": [
+        "evidence/run_cbb3de08/cumulative_result.json",
+        "evidence/run_cbb3de08/mnist_checker.json",
+        ".openresearch/artifacts/claim_1/raw_output.json",
+        ".openresearch/artifacts/claim_1/independent_checker_output.json",
+        ".openresearch/artifacts/claim_1/negative_control_output.json"
+      ],
+      "result": {
+        "laplace_error": 0.0,
+        "triangular_error": 0.0,
+        "wrong_score_error": 0.05369396702682416
+      },
+      "limitation": "Finite numerical corroboration at declared functions and points; not a universal proof."
+    },
+    {
+      "id": "C2",
+      "paper_anchor": "Theorem 7",
+      "status": "VERIFIED",
+      "producer": "repro/numerics.py",
+      "evidence": [
+        "evidence/run_cbb3de08/cumulative_result.json",
+        ".openresearch/artifacts/claim_1/raw_output.json",
+        "pages/current/claims-1-3.md"
+      ],
+      "result": {
+        "grad_x_error": 9.952129398360654e-12,
+        "grad_scale_error": 1.5252021867695476e-11
+      },
+      "limitation": "Finite-difference calibration; not a replacement for the symbolic theorem."
+    },
+    {
+      "id": "C3",
+      "paper_anchor": "Theorem 8",
+      "status": "VERIFIED",
+      "producer": "repro/numerics.py",
+      "evidence": [
+        "evidence/run_cbb3de08/cumulative_result.json",
+        ".openresearch/artifacts/claim_1/raw_output.json",
+        "pages/current/claims-1-3.md"
+      ],
+      "result": {
+        "grad_cov_x_error": 2.3664403769885212e-11,
+        "grad_cov_scale_error": 5.203468766978858e-10
+      },
+      "limitation": "Finite numerical calibration only."
+    },
+    {
+      "id": "C4",
+      "paper_anchor": "Section 4 benchmark",
+      "status": "VERIFIED",
+      "producer": "repro/section4.py and repro/check_section4.py",
+      "evidence": [
+        "evidence/run_cbb3de08/section4_raw.csv",
+        "evidence/run_cbb3de08/section4_checker.json",
+        "pages/current/claims-4-5.md"
+      ],
+      "result": {
+        "cell_count": 447,
+        "expected_cell_count": 447,
+        "official_dataset_integrity_pass": true,
+        "negative_control_pass": true
+      },
+      "limitation": "Independent reconstruction; unreleased author implementation is not claimed."
+    },
+    {
+      "id": "C5",
+      "paper_anchor": "Section 4 target-strategy conclusion",
+      "status": "VERIFIED",
+      "producer": "repro/check_section4.py",
+      "evidence": [
+        "evidence/run_cbb3de08/section4_raw.csv",
+        "evidence/run_cbb3de08/section4_checker.json",
+        "pages/current/claims-4-5.md"
+      ],
+      "result": {
+        "criterion": "paper target within 1% of cell minimum",
+        "cases_within_one_percent": 12,
+        "total_cases": 12
+      },
+      "limitation": "Scoped benchmark ranking; no broader performance claim."
+    },
+    {
+      "id": "C6",
+      "paper_anchor": "Sections 4.2-4.5 application demonstrations",
+      "status": "BLOCKED",
+      "producer": "repro/mnist_application.py, repro/warcraft_application.py, repro/rendering_application.py, repro/tem_application.py",
+      "evidence": [
+        "evidence/run_cbb3de08/mnist_result.json",
+        "evidence/run_cbb3de08/warcraft_result.json",
+        "evidence/run_cbb3de08/rendering_result.json",
+        "evidence/run_cbb3de08/tem_result.json",
+        "pages/current/claim-6.md"
+      ],
+      "result": {
+        "routes_audited": 4,
+        "full_scale_routes_completed": 0,
+        "counterexample_found": false,
+        "all_paper_assumptions_satisfied": false
+      },
+      "limitation": "The conjunction remains blocked by scale, capability, and exact-author-asset boundaries."
+    }
+  ],
+  "attribution": {
+    "name": "MachineLearning-Nerd",
+    "email": "MachineLearning-Nerd@users.noreply.github.com",
+    "co_author_trailers_allowed": false
+  }
+}
