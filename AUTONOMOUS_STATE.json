@@ -25,17 +25,17 @@
     "5": 1,
     "6": 4
   },
-  "last_checkpoint": "2026-08-19T14:38:31+05:30",
-  "last_known_git_commit": "e099f21505ab01bb0717ead97624cf7f40b86266",
+  "last_checkpoint": "2026-08-19T14:40:00+05:30",
+  "last_known_git_commit": "4ef36ada17b5296687619b6c00c8a7b2e4e9d00e",
   "publication_allowed": false,
   "overall_verdict": "VERIFIED_SCOPED_CLAIMS_1_TO_5_CLAIM_6_BLOCKED",
   "score_claim": false,
   "official_author_endorsement": false,
   "branch_count": 1,
   "verification_checkpoint": {
-    "parent_commit": "e099f21505ab01bb0717ead97624cf7f40b86266",
-    "local_verifier": "FINAL_AUDIT=VERIFIED branches=1 commits=28",
-    "fresh_clone_verifier": "FINAL_AUDIT=VERIFIED branches=1 commits=28",
+    "parent_commit": "4ef36ada17b5296687619b6c00c8a7b2e4e9d00e",
+    "local_verifier": "FINAL_AUDIT=VERIFIED branches=1 commits=29",
+    "fresh_clone_verifier": "FINAL_AUDIT=VERIFIED branches=1 commits=29",
     "fresh_clone_path": "post-publish fresh clone"
   },
   "dossier_files": [

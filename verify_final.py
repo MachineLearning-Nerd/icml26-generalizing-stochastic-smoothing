@@ -15,7 +15,7 @@ EXPECTED_REPOSITORY = "MachineLearning-Nerd/icml26-generalizing-stochastic-smoot
 CANONICAL_NAME = "MachineLearning-Nerd"
 CANONICAL_EMAIL = "MachineLearning-Nerd@users.noreply.github.com"
 EXPECTED_BRANCHES = {"main"}
-EXPECTED_COMMIT_COUNT = 28
+EXPECTED_COMMIT_COUNT = 29
 EXPECTED_OVERALL_VERDICT = "VERIFIED_SCOPED_CLAIMS_1_TO_5_CLAIM_6_BLOCKED"
 EXPECTED_CLAIMS = {
     "C1": "VERIFIED",
@@ -45,7 +45,7 @@ EXPECTED_HASHES = {
     "REPORT.md": "1b7b1e6e7dd569bf4edeacbd4fb67a67ee7075c0094ef77b61d6937c10d8950b",
     "claims.json": "5e98424960e0dafe4dee674016f2885d1992e54ea876de3c0875f169a1c03616",
     "reproduction_verdicts.json": "a1bc4d48bc0a5b69d46f24d23f70a298777e104db78c0cba17c7cd18648e0d67",
-    "AUTONOMOUS_STATE.json": "565138e4c7c38d07e87699c893f4df67b6423db5ba556d2dc4f66a1554194795",
+    "AUTONOMOUS_STATE.json": "f09e2336c958ad4e422d95fe6e90d26b8aaf070e5af76f930a3d3f134f3dc5c3",
 }
 REQUIRED_FILES = {
     "README.md",
