@@ -45,7 +45,7 @@ EXPECTED_HASHES = {
     "REPORT.md": "1b7b1e6e7dd569bf4edeacbd4fb67a67ee7075c0094ef77b61d6937c10d8950b",
     "claims.json": "5e98424960e0dafe4dee674016f2885d1992e54ea876de3c0875f169a1c03616",
     "reproduction_verdicts.json": "a1bc4d48bc0a5b69d46f24d23f70a298777e104db78c0cba17c7cd18648e0d67",
-    "AUTONOMOUS_STATE.json": "039ac7f92207a0688db9ea98ce9f7c3fa69d6bd4434237240cfcbf069f7a4cfe",
+    "AUTONOMOUS_STATE.json": "565138e4c7c38d07e87699c893f4df67b6423db5ba556d2dc4f66a1554194795",
 }
 REQUIRED_FILES = {
     "README.md",
