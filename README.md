@@ -58,6 +58,7 @@ The detailed audit records are separated by purpose:
 | [REPORT.md](REPORT.md) | Scoped audit decision and publication boundary. |
 | [claims.json](claims.json) | Machine-readable claim ledger. |
 | [reproduction_verdicts.json](reproduction_verdicts.json) | Machine-readable claim statuses, production paths, evidence, and scope boundaries. |
+| [AUTONOMOUS_STATE.json](AUTONOMOUS_STATE.json) | Machine-readable phase, publication boundary, branch, and checkpoint state. |
 | [EVIDENCE_MANIFEST.json](EVIDENCE_MANIFEST.json) | Machine-readable evidence hashes and required paths. |
 | [verify_final.py](verify_final.py) | Dependency-free publication verifier. |
 | [CITATION.cff](CITATION.cff) | Citation metadata for the paper and this audit. |
