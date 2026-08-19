@@ -3,6 +3,10 @@
   "repository": "MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing",
   "previous_repository": "MachineLearning-Nerd/icml26-repro-okzQ1x71pS-generalizing-stochastic-smoothing-for-differentiation-and-gradient-estimatio",
   "overall_status": "VERIFIED_CLAIMS_1_TO_5_BLOCKED_CLAIM_6",
+  "overall_verdict": "VERIFIED_SCOPED_CLAIMS_1_TO_5_CLAIM_6_BLOCKED",
+  "publication_allowed": false,
+  "score_claim": false,
+  "official_author_endorsement": false,
   "paper": {
     "title": "Generalizing Stochastic Smoothing for Differentiation and Gradient Estimation",
     "arxiv": "2410.08125",

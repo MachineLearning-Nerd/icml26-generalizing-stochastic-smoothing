@@ -4,6 +4,10 @@
 
 VERIFIED_CLAIMS_1_TO_5_BLOCKED_CLAIM_6
 
+Machine-readable overall verdict: `VERIFIED_SCOPED_CLAIMS_1_TO_5_CLAIM_6_BLOCKED`.
+`publication_allowed=false`, `score_claim=false`, and
+`official_author_endorsement=false`.
+
 The repository is a complete, published record of finite Claims 1–5
 reproduction evidence and a deliberately bounded Claim 6 audit. It is not a
 claim that all four application demonstrations were completed at the paper's

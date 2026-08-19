@@ -13,7 +13,7 @@ Canonical branch: main
 Current phase: published_and_verified
 Publication status: normalized repository published and remote branch cleanup verified; no new scientific run was started
 Compute policy: historical evidence used HF cpu-upgrade with an 8-vCPU cgroup quota and no GPU; no new expensive run is authorized by this cleanup
-Audit dossier: CLAIM_EVIDENCE.md, SOURCE_AUDIT.md, BRANCH_AUDIT.md, ENVIRONMENT.md, REPORT.md, claims.json, EVIDENCE_MANIFEST.json, and verify_final.py
+Audit dossier: CLAIM_EVIDENCE.md, SOURCE_AUDIT.md, BRANCH_AUDIT.md, ENVIRONMENT.md, REPORT.md, claims.json, reproduction_verdicts.json, AUTONOMOUS_STATE.json, EVIDENCE_MANIFEST.json, and verify_final.py
 Attribution: all reachable final commits use MachineLearning-Nerd <MachineLearning-Nerd@users.noreply.github.com>; no co-author trailers
 Final branch inventory: main only
 
@@ -29,5 +29,9 @@ Claim status:
 - Claim 4: VERIFIED 447-cell Section 4 benchmark
 - Claim 5: VERIFIED paper-target ranking in 12/12 cases
 - Claim 6: BLOCKED; four application routes are audited, but not all four full demonstrations were executed at the disclosed scale
+
+Publication boundary: `publication_allowed=false`, `score_claim=false`, and
+`official_author_endorsement=false`. The finite evidence is scoped to the
+declared contracts and does not establish a universal paper-level result.
 
 The current main branch contains the latest publication surface. Fourteen historical experiment branch pointers are documented in branch-audit.md and were retired after the audit was committed. The historical evidence is retained; the branch pointers are not.

@@ -15,7 +15,8 @@ EXPECTED_REPOSITORY = "MachineLearning-Nerd/icml26-generalizing-stochastic-smoot
 CANONICAL_NAME = "MachineLearning-Nerd"
 CANONICAL_EMAIL = "MachineLearning-Nerd@users.noreply.github.com"
 EXPECTED_BRANCHES = {"main"}
-EXPECTED_COMMIT_COUNT = 26
+EXPECTED_COMMIT_COUNT = 28
+EXPECTED_OVERALL_VERDICT = "VERIFIED_SCOPED_CLAIMS_1_TO_5_CLAIM_6_BLOCKED"
 EXPECTED_CLAIMS = {
     "C1": "VERIFIED",
     "C2": "VERIFIED",
@@ -39,6 +40,12 @@ EXPECTED_HASHES = {
     "notebooks/reproduction.py": "2c1f5fde326a7e2c50746bea4f0cc7c3a66f843bb70b7973066fc4b2acae36de",
     "pyproject.toml": "db69c7243b94fd2b9c5c9857caa30888f100a9243e2ab4238945c40dd81aae5b",
     "uv.lock": "481c3d6f9eb6bd123130322fb126fbf579d48f118a140bb597d14a3bbf3b3afa",
+    "README.md": "fc30331f1e262f3d276848421777693e20fc60d59e1885d0d9ff88e5096a7cad",
+    "STATUS.md": "055345c42320d9f56083987f4c53644f19707a9f9c806218c88049d3a8ee7262",
+    "REPORT.md": "1b7b1e6e7dd569bf4edeacbd4fb67a67ee7075c0094ef77b61d6937c10d8950b",
+    "claims.json": "5e98424960e0dafe4dee674016f2885d1992e54ea876de3c0875f169a1c03616",
+    "reproduction_verdicts.json": "a1bc4d48bc0a5b69d46f24d23f70a298777e104db78c0cba17c7cd18648e0d67",
+    "AUTONOMOUS_STATE.json": "039ac7f92207a0688db9ea98ce9f7c3fa69d6bd4434237240cfcbf069f7a4cfe",
 }
 REQUIRED_FILES = {
     "README.md",
@@ -51,6 +58,8 @@ REQUIRED_FILES = {
     "AUTHOR_THANK_YOU.md",
     "CITATION.cff",
     "claims.json",
+    "reproduction_verdicts.json",
+    "AUTONOMOUS_STATE.json",
     "EVIDENCE_MANIFEST.json",
     "verify_final.py",
 }
@@ -193,6 +202,14 @@ def verify_ledgers() -> None:
             fail("repository marker is wrong")
         if record.get("overall_status") != "VERIFIED_CLAIMS_1_TO_5_BLOCKED_CLAIM_6":
             fail("overall status is wrong")
+        if record.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+            fail("overall verdict is wrong")
+        if (
+            record.get("publication_allowed") is not False
+            or record.get("score_claim") is not False
+            or record.get("official_author_endorsement") is not False
+        ):
+            fail("publication boundary is wrong")
     observed = {row.get("id"): row.get("status") for row in claims.get("claims", [])}
     if observed != EXPECTED_CLAIMS:
         fail(f"claim ledger statuses are wrong: {observed}")
@@ -211,6 +228,37 @@ def verify_ledgers() -> None:
         fail("manifest branch policy is wrong")
     if manifest.get("attribution", {}).get("email") != CANONICAL_EMAIL:
         fail("manifest attribution is wrong")
+
+    reproduction = read_json("reproduction_verdicts.json")
+    if reproduction.get("repository") != EXPECTED_REPOSITORY:
+        fail("reproduction repository marker is wrong")
+    if reproduction.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        fail("reproduction overall verdict is wrong")
+    if (
+        reproduction.get("publication_allowed") is not False
+        or reproduction.get("score_claim") is not False
+        or reproduction.get("official_author_endorsement") is not False
+    ):
+        fail("reproduction publication boundary is wrong")
+    reproduction_claims = {
+        row.get("id"): row.get("status")
+        for row in reproduction.get("claims", [])
+    }
+    if reproduction_claims != EXPECTED_CLAIMS:
+        fail(f"reproduction claim statuses are wrong: {reproduction_claims}")
+
+    state = read_json("AUTONOMOUS_STATE.json")
+    if state.get("repository") != EXPECTED_REPOSITORY:
+        fail("state repository marker is wrong")
+    if state.get("overall_verdict") != EXPECTED_OVERALL_VERDICT:
+        fail("state overall verdict is wrong")
+    if (
+        state.get("publication_allowed") is not False
+        or state.get("score_claim") is not False
+        or state.get("official_author_endorsement") is not False
+        or state.get("branch_count") != 1
+    ):
+        fail("state publication boundary is wrong")
 
 
 def main() -> int:
@@ -240,6 +288,9 @@ def main() -> int:
         "AUTHOR_THANK_YOU.md",
         "VERIFIED",
         "BLOCKED",
+        "reproduction_verdicts.json",
+        "AUTONOMOUS_STATE.json",
+        "publication_allowed",
         "verify_final.py",
     ):
         if marker not in readme:

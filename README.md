@@ -24,6 +24,10 @@ The current result is intentionally asymmetric:
 - Claim 6 is BLOCKED because its four application demonstrations were not all executed at the disclosed scale with the exact author assets and protocol.
 - The old challenge-generated repository and its experiment branches were normalized into one public main branch after their purposes were recorded below.
 
+The publication boundary is explicit: `publication_allowed` is `false` because
+the full four-application conjunction is blocked. This repository claims no
+current score and no official author endorsement.
+
 ## Paper and repository record
 
 | Field | Record |
@@ -53,6 +57,7 @@ The detailed audit records are separated by purpose:
 | [ENVIRONMENT.md](ENVIRONMENT.md) | Recorded runs, compute provenance, dependencies, and artifact hashes. |
 | [REPORT.md](REPORT.md) | Scoped audit decision and publication boundary. |
 | [claims.json](claims.json) | Machine-readable claim ledger. |
+| [reproduction_verdicts.json](reproduction_verdicts.json) | Machine-readable claim statuses, production paths, evidence, and scope boundaries. |
 | [EVIDENCE_MANIFEST.json](EVIDENCE_MANIFEST.json) | Machine-readable evidence hashes and required paths. |
 | [verify_final.py](verify_final.py) | Dependency-free publication verifier. |
 | [CITATION.cff](CITATION.cff) | Citation metadata for the paper and this audit. |

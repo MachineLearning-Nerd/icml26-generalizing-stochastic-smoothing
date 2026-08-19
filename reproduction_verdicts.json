@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "repository": "MachineLearning-Nerd/icml26-generalizing-stochastic-smoothing",
+  "paper": {
+    "title": "Generalizing Stochastic Smoothing for Differentiation and Gradient Estimation",
+    "arxiv": "2410.08125",
+    "openreview": "GBWqZNoeIk",
+    "authors": [
+      "Felix Petersen",
+      "Christian Borgelt",
+      "Aashwin Ananda Mishra",
+      "Stefano Ermon"
+    ]
+  },
+  "overall_verdict": "VERIFIED_SCOPED_CLAIMS_1_TO_5_CLAIM_6_BLOCKED",
+  "publication_allowed": false,
+  "score_claim": false,
+  "official_author_endorsement": false,
+  "claims": [
+    {
+      "id": "C1",
+      "status": "VERIFIED",
+      "status_detail": "VERIFIED_FINITE_NUMERICAL_CORROBORATION",
+      "production_path": "repro/numerics.py -> independent quadrature/checker -> wrong-score negative control",
+      "scope": "Declared absolute-value test function at finite points and two source-compatible perturbation densities; numerical corroboration, not a universal proof.",
+      "evidence": [
+        "evidence/run_cbb3de08/cumulative_result.json",
+        ".openresearch/artifacts/claim_1/raw_output.json",
+        ".openresearch/artifacts/claim_1/independent_checker_output.json",
+        ".openresearch/artifacts/claim_1/negative_control_output.json"
+      ]
+    },
+    {
+      "id": "C2",
+      "status": "VERIFIED",
+      "status_detail": "VERIFIED_FINITE_DIFFERENCE_CALIBRATION",
+      "production_path": "repro/numerics.py -> analytic location/scale gradients -> independent centered finite differences",
+      "scope": "One disclosed multivariate finite instance with independent finite-difference checks; not a replacement for the symbolic theorem.",
+      "evidence": [
+        "evidence/run_cbb3de08/cumulative_result.json",
+        "pages/current/claims-1-3.md"
+      ]
+    },
+    {
+      "id": "C3",
+      "status": "VERIFIED",
+      "status_detail": "VERIFIED_FINITE_COVARIANCE_CALIBRATION",
+      "production_path": "repro/numerics.py -> covariance derivative construction -> independent finite-difference checks",
+      "scope": "One disclosed covariance construction and finite calibration; not a replacement for the symbolic theorem.",
+      "evidence": [
+        "evidence/run_cbb3de08/cumulative_result.json",
+        "pages/current/claims-1-3.md"
+      ]
+    },
+    {
+      "id": "C4",
+      "status": "VERIFIED",
+      "status_detail": "VERIFIED_447_CELL_SECTION4_RECONSTRUCTION",
+      "production_path": "repro/section4.py -> raw Section 4 CSV -> repro/check_section4.py",
+      "scope": "Independent reconstruction of the declared 447 finite benchmark cells, official-data integrity, oracles, and controls; no unreleased author implementation is claimed.",
+      "evidence": [
+        "evidence/run_cbb3de08/section4_raw.csv",
+        "evidence/run_cbb3de08/section4_checker.json",
+        "pages/current/claims-4-5.md"
+      ]
+    },
+    {
+      "id": "C5",
+      "status": "VERIFIED",
+      "status_detail": "VERIFIED_12_CASE_TARGET_RANKING",
+      "production_path": "repro/section4.py -> feasible strategy-cell ranking -> repro/check_section4.py",
+      "scope": "The paper target is within 1% of the finite cell minimum in 12 declared sorting/distribution cases; no broader performance claim.",
+      "evidence": [
+        "evidence/run_cbb3de08/section4_raw.csv",
+        "evidence/run_cbb3de08/section4_checker.json",
+        "pages/current/claims-4-5.md"
+      ]
+    },
+    {
+      "id": "C6",
+      "status": "BLOCKED",
+      "status_detail": "BLOCKED_FULL_APPLICATION_CONJUNCTION",
+      "production_path": "repro/mnist_application.py + repro/warcraft_application.py + repro/rendering_application.py + repro/tem_application.py",
+      "scope": "Four application routes are separately audited, but the conjunction is not reproduced at disclosed scale with exact author assets and protocol.",
+      "evidence": [
+        "evidence/run_cbb3de08/mnist_result.json",
+        "evidence/run_cbb3de08/warcraft_result.json",
+        "evidence/run_cbb3de08/rendering_result.json",
+        "evidence/run_cbb3de08/tem_result.json",
+        "pages/current/claim-6.md"
+      ]
+    }
+  ]
+}
